@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# Exit immediately if any command fails
+# Exit on errors
 set -e
 
-echo "Installing npm dependencies..."
+echo "Installing npm packages..."
 npm install
 
-echo "Installing Playwright browsers..."
-yarn playwright install
+echo "Installing Playwright browsers with dependencies..."
+npx playwright install --with-deps
 
 echo "Running tests..."
 yarn test
