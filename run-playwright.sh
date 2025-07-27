@@ -3,10 +3,10 @@
 set -e
 
 echo "Installing npm packages..."
-npm install
+yarn install
 
 echo "Installing Playwright Chromium browser (without --with-deps)..."
-npx playwright install chromium
+yarn playwright install chromium
 
 echo "Running tests..."
-yarn test
+yarn playwright test tests/ --workers=10
