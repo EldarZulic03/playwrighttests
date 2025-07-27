@@ -10,3 +10,5 @@ yarn playwright install chromium
 
 echo "Running tests..."
 yarn playwright test tests/ --workers=10
+
+echo "CPU cores: $(nproc || sysctl -n hw.ncpu)"
